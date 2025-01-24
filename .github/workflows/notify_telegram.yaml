@@ -1,20 +1,21 @@
-name: telegram message
+# TryOS Labs
+
+name: Notify Telegram
 on: [push]
 jobs:
-
-  build:
-    name: Build
+  notify-telegram:
+    name: Notify Telegram
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - name: send telegram message on push
+      - name: Notify Telegram
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
-            
-            Repository: ${{ github.repository }}
-            
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            ${{ github.actor }} committed to the ${{ github.repository }} repository:
+            ${{ github.event.commits[0].message }}
+
+            Changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
