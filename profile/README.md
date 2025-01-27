@@ -1,6 +1,6 @@
 <div align="center">
 
-![TryOS Labs](../Logo/TryOS-Labs.svg)
+<!-- ![TryOS Labs](../Logo/TryOS-Labs.svg) -->
 
 # TryOS Labs
 
