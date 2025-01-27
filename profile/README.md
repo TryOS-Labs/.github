@@ -1,6 +1,8 @@
 <div align="center">
 
-## TryOS Labs
+![TryOS Labs](../Logo/TryOS-Labs.svg)
+
+# TryOS Labs
 
 Optimizing Your Linux Workflows
 
